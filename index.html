@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Courses">
+  <meta name="theme-color" content="##1a5c3a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <title>Ma liste de courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="header">
+      <div class="header-top">
+        <div>
+          <h1 class="header-title">Courses</h1>
+          <p class="header-sub" id="header-sub">Chargement…</p>
+        </div>
+        <button class="btn-icon" id="btn-clear-done" title="Effacer les articles cochés">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cats" id="cats"></div>
+
+      <div class="input-row">
+        <input type="text" id="input-item" placeholder="Ajouter un article…" autocomplete="off" autocorrect="off">
+        <select id="input-cat">
+          <option value="Fruits & Légumes">🥦 Fruits & Légumes</option>
+          <option value="Épicerie" selected>🥫 Épicerie</option>
+          <option value="Frais">🧀 Frais</option>
+          <option value="Boulangerie">🥖 Boulangerie</option>
+          <option value="Boissons">🥤 Boissons</option>
+          <option value="Hygiène">🧴 Hygiène</option>
+          <option value="Autre">📦 Autre</option>
+        </select>
+        <button id="btn-add">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="list-area" id="list-area">
+      <p class="empty-msg" id="empty-msg" style="display:none">Liste vide — ajoutez vos premiers articles !</p>
+    </main>
+
+    <div class="progress-bar-wrap" id="progress-wrap" style="display:none">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
